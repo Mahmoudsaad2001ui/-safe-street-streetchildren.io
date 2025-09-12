@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاغاتي - شارع آمن</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="شارع آمن">
+                <h1>شارع آمن</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="new_report.html">تقديم بلاغ</a></li>
+                    <li><a href="report.html">بلاغاتي  </a></li>
+                    <li><a href="donate.html">التبرع</a></li>
+                    <li><a href="education.html">التعليم الرقمي</a></li>
+                    <li><a href="about.html">عن المبادرة</a></li>
+                    <li><a href="login.html" class="login-btn">تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="reports-hero">
+        <div class="container">
+            <h1>بلاغاتي</h1>
+            <p>تتبع جميع البلاغات التي قمت بإرسالها وحالتها</p>
+        </div>
+    </section>
+
+    <section class="my-reports">
+        <div class="container">
+            <div class="reports-filter">
+                <div class="filter-group">
+                    <label for="status-filter">تصفية حسب الحالة:</label>
+                    <select id="status-filter">
+                        <option value="all">جميع البلاغات</option>
+                        <option value="new">جديدة</option>
+                        <option value="in-progress">قيد المتابعة</option>
+                        <option value="resolved">تم الحل</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="date-filter">تصفية حسب التاريخ:</label>
+                    <select id="date-filter">
+                        <option value="all">كل التواريخ</option>
+                        <option value="today">اليوم</option>
+                        <option value="week">هذا الأسبوع</option>
+                        <option value="month">هذا الشهر</option>
+                    </select>
+                </div>
+                <button class="btn filter-btn">تطبيق التصفية</button>
+            </div>
+
+            <div class="reports-list">
+                <div class="report-card">
+                    <div class="report-header">
+                        <h3>بلاغ #12345</h3>
+                        <span class="status-badge in-progress">قيد المتابعة</span>
+                    </div>
+                    <div class="report-details">
+                        <div class="detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>15 يونيو 2023 - 10:30 ص</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>القاهرة، حي المعادي، أمام مسجد الرحمن</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-child"></i>
+                            <span>طفل واحد، ذكر، عمره تقريباً 8 سنوات</span>
+                        </div>
+                    </div>
+                    <div class="report-description">
+                        <p>الطفل كان يرتدي قميص أزرق وسروال جينز، يبدو أنه يبيع المناديل عند إشارة المرور، يبدو عليه التعب وسوء التغذية.</p>
+                    </div>
+                    <div class="report-updates">
+                        <h4>آخر التحديثات:</h4>
+                        <div class="update">
+                            <div class="update-header">
+                                <span class="update-date">15 يونيو 2023 - 11:45 ص</span>
+                                <span class="update-status">تم إرسال الفريق</span>
+                            </div>
+                            <p>تم إرسال فريق متابعة إلى الموقع، وسيتم تحديثك عند الوصول.</p>
+                        </div>
+                        <div class="update">
+                            <div class="update-header">
+                                <span class="update-date">15 يونيو 2023 - 12:30 م</span>
+                                <span class="update-status">تم الوصول للموقع</span>
+                            </div>
+                            <p>وصل الفريق إلى الموقع وبدأ في التواصل مع الطفل.</p>
+                        </div>
+                    </div>
+                    <button class="btn view-details-btn">عرض التفاصيل الكاملة</button>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-header">
+                        <h3>بلاغ #12344</h3>
+                        <span class="status-badge resolved">تم الحل</span>
+                    </div>
+                    <div class="report-details">
+                        <div class="detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>10 يونيو 2023 - 03:15 م</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>الجيزة، الدقي، أمام جامعة القاهرة</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-child"></i>
+                            <span>طفلتان، إناث، أعمارهن تقريباً 10-12 سنة</span>
+                        </div>
+                    </div>
+                    <div class="report-description">
+                        <p>طفلتان تتسولان أمام بوابة الجامعة، إحداهما تحمل رضيعاً، يبدو أنهن يعملن ضمن مجموعة منظمة.</p>
+                    </div>
+                    <div class="report-updates">
+                        <h4>آخر التحديثات:</h4>
+                        <div class="update">
+                            <div class="update-header">
+                                <span class="update-date">10 يونيو 2023 - 05:30 م</span>
+                                <span class="update-status">تم حل المشكلة</span>
+                            </div>
+                            <p>تم نقل الطفلات إلى مركز الرعاية التابع للجمعية، وتم إبلاغ الشرطة عن المجموعة المنظمة.</p>
+                        </div>
+                    </div>
+                    <button class="btn view-details-btn">عرض التفاصيل الكاملة</button>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-header">
+                        <h3>بلاغ #12340</h3>
+                        <span class="status-badge new">جديدة</span>
+                    </div>
+                    <div class="report-details">
+                        <div class="detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>5 يونيو 2023 - 08:00 م</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>الإسكندرية، سيدي جابر، أمام محطة المترو</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-child"></i>
+                            <span>3 أطفال، ذكور، أعمارهم تقريباً 6-9 سنوات</span>
+                        </div>
+                    </div>
+                    <div class="report-description">
+                        <p>مجموعة أطفال ينامون على الأرصفة، يبدو أنهم يعملون في تنظيف السيارات نهاراً وينامون في الشارع ليلاً.</p>
+                    </div>
+                    <div class="report-updates">
+                        <h4>آخر التحديثات:</h4>
+                        <div class="update">
+                            <div class="update-header">
+                                <span class="update-date">5 يونيو 2023 - 08:30 م</span>
+                                <span class="update-status">تم استلام البلاغ</span>
+                            </div>
+                            <p>تم استلام بلاغك وسيتم مراجعته من قبل الفريق المختص خلال الساعات القادمة.</p>
+                        </div>
+                    </div>
+                    <button class="btn view-details-btn">عرض التفاصيل الكاملة</button>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="btn pagination-btn disabled"><i class="fas fa-chevron-right"></i> السابق</button>
+                <span class="page-numbers">1 من 3</span>
+                <button class="btn pagination-btn">التالي <i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="report-stats">
+        <div class="container">
+            <h2 class="section-title">إحصائيات بلاغاتك</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>15</h3>
+                    <p>إجمالي البلاغات</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>10</h3>
+                    <p>بلاغات تم حلها</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>3</h3>
+                    <p>بلاغات قيد المتابعة</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>2</h3>
+                    <p>بلاغات جديدة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>شارع آمن</h3>
+                    <p>منصة إلكترونية متكاملة لرصد ورعاية أطفال الشوارع وتوفير حياة كريمة لهم عبر الشراكة مع الجمعيات الأهلية والجهات الحكومية.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="report.html">الإبلاغ عن طفل</a></li>
+                        <li><a href="donate.html">التبرع</a></li>
+                        <li><a href="education.html">التعليم الرقمي</a></li>
+                        <li><a href="about.html">عن المبادرة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 شارع التحرير، القاهرة، مصر</li>
+                        <li><i class="fas fa-phone"></i> 16000</li>
+                        <li><i class="fas fa-envelope"></i> info@safe-street.org</li>
+                    </ul>
+                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 شارع آمن. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">أسئلة شائعة</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Filter functionality
+        document.querySelector('.filter-btn').addEventListener('click', function() {
+            const statusFilter = document.getElementById('status-filter').value;
+            const dateFilter = document.getElementById('date-filter').value;
+            
+            // Here you would typically filter the reports based on the selected filters
+            alert(`تم تطبيق التصفية حسب الحالة: ${statusFilter} والتاريخ: ${dateFilter}`);
+        });
+
+        // View details button functionality
+        document.querySelectorAll('.view-details-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const reportId = this.closest('.report-card').querySelector('h3').textContent;
+                alert(`سيتم عرض التفاصيل الكاملة للبلاغ ${reportId}`);
+                // In a real application, this would open a modal or redirect to a detailed page
+            });
+        });
+
+        // Pagination functionality
+        document.querySelectorAll('.pagination-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (!this.classList.contains('disabled')) {
+                    const direction = this.textContent.includes('التالي') ? 'next' : 'prev';
+                    alert(`جارٍ تحميل الصفحة ${direction === 'next' ? 'التالية' : 'السابقة'}`);
+                    // In a real application, this would load the next/prev page of reports
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم بلاغ جديد - شارع آمن</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="شارع آمن">
+                <h1>شارع آمن</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="new_report.html">تقديم بلاغ</a></li>
+                    <li><a href="reports.html">بلاغاتي</a></li>
+                    <li><a href="donate.html">التبرع</a></li>
+                    <li><a href="education.html">التعليم الرقمي</a></li>
+                    <li><a href="about.html" class="active">عن المبادرة</a></li>
+                    <li><a href="login.html" class="login-btn">تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="report-hero">
+        <div class="container">
+            <h1>تقديم بلاغ جديد</h1>
+            <p>ساعدنا في إنقاذ أطفال الشوارع بتقديم بلاغ عن حالتهم</p>
+        </div>
+    </section>
+
+    <section class="report-form-section">
+        <div class="container">
+            <form id="newReportForm" class="report-form">
+                <div class="form-step active" id="step1">
+                    <h2><i class="fas fa-info-circle"></i> المعلومات الأساسية</h2>
+                    
+                    <div class="form-group">
+                        <label for="report-type">نوع البلاغ *</label>
+                        <select id="report-type" required>
+                            <option value="">اختر نوع البلاغ</option>
+                            <option value="child-in-danger">طفل في خطر</option>
+                            <option value="homeless-child">طفل بلا مأوى</option>
+                            <option value="working-child">طفل يعمل</option>
+                            <option value="begging-child">طفل يتسول</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="child-count">عدد الأطفال *</label>
+                            <input type="number" id="child-count" min="1" max="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="child-gender">الجنس</label>
+                            <select id="child-gender">
+                                <option value="unknown">غير محدد</option>
+                                <option value="male">ذكر</option>
+                                <option value="female">أنثى</option>
+                                <option value="both">الاثنان</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="child-age">الفئة العمرية *</label>
+                            <select id="child-age" required>
+                                <option value="">اختر الفئة العمرية</option>
+                                <option value="0-5">أقل من 5 سنوات</option>
+                                <option value="6-10">6-10 سنوات</option>
+                                <option value="11-15">11-15 سنة</option>
+                                <option value="16-18">16-18 سنة</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="report-date">تاريخ المشاهدة *</label>
+                            <input type="date" id="report-date" required>
+                        </div>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" class="btn next-btn" onclick="nextStep(1, 2)">التالي <i class="fas fa-arrow-left"></i></button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step2">
+                    <h2><i class="fas fa-map-marker-alt"></i> موقع البلاغ</h2>
+                    
+                    <div class="form-group">
+                        <label for="governorate">المحافظة *</label>
+                        <select id="governorate" required>
+                            <option value="">اختر المحافظة</option>
+                            <option value="cairo">القاهرة</option>
+                            <option value="giza">الجيزة</option>
+                            <option value="alexandria">الإسكندرية</option>
+                            <!-- يمكن إضافة باقي المحافظات -->
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="district">الحي/المنطقة *</label>
+                            <input type="text" id="district" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="street">الشارع</label>
+                            <input type="text" id="street">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="landmark">معلم قريب *</label>
+                        <input type="text" id="landmark" placeholder="مثال: أمام مسجد السلام" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location-details">تفاصيل الموقع</label>
+                        <textarea id="location-details" rows="3" placeholder="أي تفاصيل إضافية تساعد في تحديد الموقع بدقة"></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" class="btn back-btn" onclick="prevStep(2, 1)"><i class="fas fa-arrow-right"></i> السابق</button>
+                        <button type="button" class="btn next-btn" onclick="nextStep(2, 3)">التالي <i class="fas fa-arrow-left"></i></button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <h2><i class="fas fa-file-alt"></i> تفاصيل إضافية</h2>
+                    
+                    <div class="form-group">
+                        <label for="report-description">وصف الحالة *</label>
+                        <textarea id="report-description" rows="5" required placeholder="صف حالة الطفل/الأطفال بالتفصيل (المظهر، السلوك، أي إصابات أو علامات تدل على سوء المعاملة)"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="video-link">رابط فيديو من Google Drive (اختياري)</label>
+                        <input type="url" id="video-link" placeholder="https://drive.google.com/file/d/.../view" pattern="https://drive.google.com.*">
+                        <div class="video-preview" id="drive-video-preview">
+                            <p>سيتم عرض معاينة الفيديو هنا بعد إدخال الرابط</p>
+                        </div>
+                        <p class="video-upload-note">يمكنك ربط فيديو من Google Drive (يفضل ألا يتجاوز 3 دقائق)</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reporter-contact">وسيلة التواصل معك (اختياري)</label>
+                        <input type="text" id="reporter-contact" placeholder="رقم هاتف أو بريد إلكتروني">
+                        <p class="form-note">لإعلامك بتحديثات حالة البلاغ</p>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="anonymous-report">
+                        <label for="anonymous-report">تقديم بلاغ مجهول</label>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" class="btn back-btn" onclick="prevStep(3, 2)"><i class="fas fa-arrow-right"></i> السابق</button>
+                        <button type="submit" class="btn submit-btn">إرسال البلاغ</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="report-guidelines">
+                <h3><i class="fas fa-info-circle"></i> إرشادات تقديم البلاغ</h3>
+                <ul>
+                    <li>تأكد من دقة المعلومات المقدمة لتسريع عملية التدخل</li>
+                    <li>في حالة الخطر الفوري، يرجى الاتصال بالرقم 16000</li>
+                    <li>البلاغات المجهولة يتم التعامل معها بنفس الجدية</li>
+                    <li>سيتم مراجعة بلاغك خلال 24 ساعة</li>
+                    <li>تأكد من أن الفيديو المرفق يوضح الحالة بوضوح</li>
+                </ul>
+                
+                <div class="emergency-contact">
+                    <h4>للحالات الطارئة:</h4>
+                    <p><i class="fas fa-phone"></i> اتصل بالخط الساخن: <strong>16000</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>شارع آمن</h3>
+                    <p>منصة إلكترونية متكاملة لرصد ورعاية أطفال الشوارع وتوفير حياة كريمة لهم.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="report.html">تقديم بلاغ</a></li>
+                        <li><a href="reports.html">بلاغاتي</a></li>
+                        <li><a href="donate.html">التبرع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 16000</li>
+                        <li><i class="fas fa-envelope"></i> reports@safe-street.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 شارع آمن. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Form steps navigation
+        function nextStep(current, next) {
+            document.getElementById(`step${current}`).classList.remove('active');
+            document.getElementById(`step${next}`).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function prevStep(current, prev) {
+            document.getElementById(`step${current}`).classList.remove('active');
+            document.getElementById(`step${prev}`).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Google Drive Video Preview
+        document.getElementById('video-link').addEventListener('input', function(e) {
+            const driveVideoPreview = document.getElementById('drive-video-preview');
+            const videoUrl = e.target.value.trim();
+            
+            driveVideoPreview.innerHTML = '<p>سيتم عرض معاينة الفيديو هنا بعد إدخال الرابط</p>';
+            
+            if (videoUrl && videoUrl.includes('drive.google.com')) {
+                let fileId = '';
+                const match = videoUrl.match(/\/file\/d\/([^\/]+)/);
+                
+                if (match && match[1]) {
+                    fileId = match[1];
+                } else {
+                    const params = new URLSearchParams(new URL(videoUrl).searchParams);
+                    fileId = params.get('id');
+                }
+                
+                if (fileId) {
+                    const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+                    const iframe = document.createElement('iframe');
+                    iframe.src = embedUrl;
+                    iframe.allow = 'autoplay';
+                    
+                    driveVideoPreview.innerHTML = '';
+                    driveVideoPreview.appendChild(iframe);
+                    iframe.style.display = 'block';
+                    
+                    const note = document.createElement('p');
+                    note.textContent = 'تأكد من أن إعدادات المشاركة تسمح بالعرض العام للفيديو';
+                    note.style.marginTop = '10px';
+                    note.style.color = '#f39c12';
+                    driveVideoPreview.appendChild(note);
+                }
+            }
+        });
+
+        // Form submission
+        document.getElementById('newReportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = {
+                type: document.getElementById('report-type').value,
+                childCount: document.getElementById('child-count').value,
+                gender: document.getElementById('child-gender').value,
+                age: document.getElementById('child-age').value,
+                date: document.getElementById('report-date').value,
+                governorate: document.getElementById('governorate').value,
+                district: document.getElementById('district').value,
+                landmark: document.getElementById('landmark').value,
+                description: document.getElementById('report-description').value,
+                videoLink: document.getElementById('video-link').value,
+                contact: document.getElementById('reporter-contact').value,
+                isAnonymous: document.getElementById('anonymous-report').checked
+            };
+            
+            // Here you would typically send the data to your backend
+            console.log('Form data:', formData);
+            
+            // Show success message
+            alert('تم استلام بلاغك بنجاح. رقم البلاغ: #12345. شكراً لمساهمتك في إنقاذ حياة طفل.');
+            
+            // Reset form
+            this.reset();
+            document.getElementById('drive-video-preview').innerHTML = '<p>سيتم عرض معاينة الفيديو هنا بعد إدخال الرابط</p>';
+            document.getElementById('step3').classList.remove('active');
+            document.getElementById('step1').classList.add('active');
+        });
+
+        // Set default date to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('report-date').value = today;
+        });
+    </script>
+</body>
+</html>

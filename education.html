@@ -1,0 +1,413 @@
+sponsor-tablet<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التعليم الرقمي - شارع آمن</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="شارع آمن">
+                <h1>شارع آمن</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="new_report.html">تقديم بلاغ</a></li>
+                    <li><a href="reports.html">بلاغاتي  </a></li>
+                    <li><a href="donate.html">التبرع</a></li>
+                    <li><a href="education.html" class="active">التعليم الرقمي</a></li>
+                    <li><a href="about.html">عن المبادرة</a></li>
+                    <li><a href="login.html" class="login-btn">تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="education-hero">
+        <div class="container">
+            <h1>التعليم الرقمي لأطفال الشوارع</h1>
+            <p>نحو مستقبل أفضل عبر تعليم تفاعلي يتناسب مع ظروفهم</p>
+        </div>
+    </section>
+
+    <section class="education-program">
+        <div class="container">
+            <div class="program-intro">
+                <h2>برنامج التابلت التعليمي</h2>
+                <p>بسبب صعوبة إلحاق أطفال الشوارع بالمدارس التقليدية، قمنا بتطوير برنامج تعليمي رقمي عبر أجهزة لوحية مصممة خصيصاً لهم، تحتوي على مناهج تفاعلية ممتعة تسهل عملية التعلم وإعادة الدمج في النظام التعليمي.</p>
+                <img src="image/tl.jpg" alt="طفل يستخدم التابلت التعليمي">
+            </div>
+
+            <div class="program-features">
+                <h2>مميزات البرنامج</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-child"></i>
+                        <h3>مصمم لأطفال الشوارع</h3>
+                        <p>مناهج مصممة خصيصاً تتناسب مع مستواهم التعليمي وخبراتهم الحياتية</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>تعليم تفاعلي</h3>
+                        <p>ألعاب تعليمية، فيديوهات وأنشطة تفاعلية تجعل التعلم ممتعاً</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>مسار تعليمي متكامل</h3>
+                        <p>من الصف الأول الابتدائي حتى السادس، مع إمكانية الحصول على شهادة معتمدة</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <h3>دعم نفسي</h3>
+                        <p>تمارين وأنشطة لدعم الصحة النفسية وتطوير المهارات الاجتماعية</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-wifi"></i>
+                        <h3>عمل دون اتصال</h3>
+                        <p>يعمل بدون إنترنت مع مزامنة البيانات عند الاتصال</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>تتبع التقدم</h3>
+                        <p>نظام متكامل لمتابعة تقدم الطفل وتحديد احتياجاته</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="curriculum">
+        <div class="container">
+            <h2 class="section-title">المناهج التعليمية</h2>
+            <div class="grade-levels">
+                <div class="grade-level active" onclick="showGradeContent('level1')">
+                    <h3>المستوى الأول</h3>
+                    <p>أساسيات القراءة والكتابة والحساب</p>
+                </div>
+                <div class="grade-level" onclick="showGradeContent('level2')">
+                    <h3>المستوى الثاني</h3>
+                    <p>اللغة العربية والرياضيات والعلوم الأساسية</p>
+                </div>
+                <div class="grade-level" onclick="showGradeContent('level3')">
+                    <h3>المستوى الثالث</h3>
+                    <p>مناهج الصفوف الثالث والرابع الابتدائي</p>
+                </div>
+                <div class="grade-level" onclick="showGradeContent('level4')">
+                    <h3>المستوى الرابع</h3>
+                    <p>مناهج الصفوف الخامس والسادس الابتدائي</p>
+                </div>
+            </div>
+
+            <div class="grade-content active" id="level1-content">
+                <h3>المستوى الأول - أساسيات التعلم</h3>
+                <div class="subjects">
+                    <div class="subject">
+                        <h4>اللغة العربية</h4>
+                        <ul>
+                            <li>تعلم الحروف الأبجدية</li>
+                            <li>قراءة كلمات بسيطة</li>
+                            <li>كتابة الحروف والكلمات</li>
+                            <li>مفردات أساسية</li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <h4>الرياضيات</h4>
+                        <ul>
+                            <li>الأرقام من 1 إلى 100</li>
+                            <li>الجمع والطرح البسيط</li>
+                            <li>الأشكال الهندسية</li>
+                            <li>المفاهيم الأساسية للقياس</li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <h4>المهارات الحياتية</h4>
+                        <ul>
+                            <li>التعرف على الجسم والصحة</li>
+                            <li>الأمان الشخصي</li>
+                            <li>المهارات الاجتماعية</li>
+                            <li>العناية بالنظافة</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="learning-activities">
+                    <h4>أنشطة تعليمية</h4>
+                    <div class="activities">
+                        <div class="activity">
+                            <p>لعبة تركيب الحروف</p>
+                        </div>
+                        <div class="activity">
+                            <p>عد الفواكه</p>
+                        </div>
+                        <div class="activity">
+                            <p>توصيل الأشكال</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grade-content" id="level2-content">
+                <h3>المستوى الثاني - التعليم الأساسي</h3>
+                <div class="subjects">
+                    <div class="subject">
+                        <h4>اللغة العربية</h4>
+                        <ul>
+                            <li>قراءة جمل قصيرة</li>
+                            <li>قواعد اللغة الأساسية</li>
+                            <li>تكوين الجمل</li>
+                            <li>قصص قصيرة</li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <h4>الرياضيات</h4>
+                        <ul>
+                            <li>العمليات الحسابية الأساسية</li>
+                            <li>الجمع والطرح حتى 1000</li>
+                            <li>مفاهيم الضرب والقسمة</li>
+                            <li>الكسور البسيطة</li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <h4>العلوم</h4>
+                        <ul>
+                            <li>أجزاء الجسم</li>
+                            <li>الحيوانات والنباتات</li>
+                            <li>الطبيعة والبيئة</li>
+                            <li>مفاهيم علمية بسيطة</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="learning-activities">
+                    <h4>أنشطة تعليمية</h4>
+                    <div class="activities">
+                        <div class="activity">
+                            <p>تركيب الجمل</p>
+                        </div>
+                        <div class="activity">
+                            <p>حل المسائل الرياضية</p>
+                        </div>
+                        <div class="activity">
+                            <p>تجارب علمية بسيطة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grade-content" id="level3-content">
+                <h3>المستوى الثالث - الصفوف المتوسطة</h3>
+                <div class="subjects">
+                    <div class="subject">
+                        <h4>اللغة العربية</h4>
+                        <ul>
+                            <li>قراءة نصوص متوسطة</li>
+                            <li>قواعد اللغة المتقدمة</li>
+                            <li>التعبير الكتابي</li>
+                            <li>قصص أطول</li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <h4>الرياضيات</h4>
+                        <ul>
+                            <li>الضرب والقسمة المتقدمة</li>
+                            <li>المسائل الكلامية</li>
+                            <li>الهندسة الأساسية</li>
+                            <li>الكسور والعمليات عليها</li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <h4>العلوم والدراسات</h4>
+                        <ul>
+                            <li>علوم الحياة</li>
+                            <li>علوم الأرض</li>
+                            <li>مقدمة في الفيزياء</li>
+                            <li>الدراسات الاجتماعية</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="learning-activities">
+                    <h4>أنشطة تعليمية</h4>
+                    <div class="activities">
+                        <div class="activity">
+                            <p>تحليل النصوص</p>
+                        </div>
+                        <div class="activity">
+                            <p>حل المسائل الهندسية</p>
+                        </div>
+                        <div class="activity">
+                            <p>مشاريع علمية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grade-content" id="level4-content">
+                <h3>المستوى الرابع - الصفوف العليا</h3>
+                <div class="subjects">
+                    <div class="subject">
+                        <h4>اللغة العربية</h4>
+                        <ul>
+                            <li>فهم النصوص المعقدة</li>
+                            <li>قواعد اللغة المتقدمة</li>
+                            <li>التعبير الإبداعي</li>
+                            <li>القراءة الناقدة</li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <h4>الرياضيات</h4>
+                        <ul>
+                            <li>الجبر الأساسي</li>
+                            <li>الهندسة المتقدمة</li>
+                            <li>الإحصاء البسيط</li>
+                            <li>حل المشكلات</li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <h4>العلوم والتكنولوجيا</h4>
+                        <ul>
+                            <li>علوم متقدمة</li>
+                            <li>مقدمة في البرمجة</li>
+                            <li>الابتكار والتكنولوجيا</li>
+                            <li>العلوم التطبيقية</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="learning-activities">
+                    <h4>أنشطة تعليمية</h4>
+                    <div class="activities">
+                        <div class="activity">
+                            <p>كتابة المقالات</p>
+                        </div>
+                        <div class="activity">
+                            <p>حل المعادلات الجبرية</p>
+                        </div>
+                        <div class="activity">
+                            <p>مشاريع تكنولوجية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">قصص نجاح</h2>
+            <div class="stories">
+                <div class="story">
+                    <img src="image/success1.png" alt="محمود">
+                    <div class="story-content">
+                        <h3>محمود، 11 سنة</h3>
+                        <p>"محمود كان يعمل في ورشة لإصلاح السيارات عندما وجده فريقنا. بعد عام من التعليم عبر التابلت، تم قبوله في الصف الثالث الابتدائي وهو الآن من أوائل فصله."</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%;">90%</div>
+                        </div>
+                        <p>تقدم في المستوى التعليمي</p>
+                    </div>
+                </div>
+                <div class="story">
+                    <img src="image/success2.png" alt="سارة">
+                    <div class="story-content">
+                        <h3>سارة، 9 سنوات</h3>
+                        <p>"سارة لم تكن تعرف القراءة أو الكتابة عندما انضمت لبرنامجنا. بعد 8 أشهر، أصبحت تقرأ قصصاً كاملة وتكتب رسائل لأصدقائها في الملجأ."</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;">85%</div>
+                        </div>
+                        <p>تقدم في مهارات القراءة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsor-tablet">
+        <div class="container">
+            <div class="sponsor-content">
+                <h2>كن سبّاقاً في دعم التعليم</h2>
+                <p>تبرع بجهاز لوحي تعليمي لطفل من أطفال الشوارع وساعده في تغيير مستقبله</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> جهاز لوحي بمواصفات تعليمية</li>
+                    <li><i class="fas fa-check"></i> شاحن وحافظة مقاومة للصدمات</li>
+                    <li><i class="fas fa-check"></i> ضمان لمدة عام</li>
+                    <li><i class="fas fa-check"></i> متابعة وتحديثات للمحتوى</li>
+                </ul>
+                <div class="tablet-cost">
+                    <span>التكلفة: 3,000 ج.م</span>
+                    <a href="donate.html" class="btn">تبرع بجهاز الآن</a>
+                </div>
+            </div>
+            <div class="sponsor-image">
+                <img src="image/sponsor-tablet.png" alt="التابلت التعليمي">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>شارع آمن</h3>
+                    <p>منصة إلكترونية متكاملة لرصد ورعاية أطفال الشوارع وتوفير حياة كريمة لهم عبر الشراكة مع الجمعيات الأهلية والجهات الحكومية.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="report.html">الإبلاغ عن طفل</a></li>
+                        <li><a href="donate.html">التبرع</a></li>
+                        <li><a href="education.html">التعليم الرقمي</a></li>
+                        <li><a href="about.html">عن المبادرة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 شارع التحرير، القاهرة، مصر</li>
+                        <li><i class="fas fa-phone"></i> 16000</li>
+                        <li><i class="fas fa-envelope"></i> info@safe-street.org</li>
+                    </ul>
+                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 شارع آمن. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">أسئلة شائعة</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Show grade content
+        function showGradeContent(gradeId) {
+            // Hide all grade contents
+            document.querySelectorAll('.grade-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Deactivate all grade levels
+            document.querySelectorAll('.grade-level').forEach(level => {
+                level.classList.remove('active');
+            });
+            
+            // Show selected grade content
+            document.getElementById(`${gradeId}-content`).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
